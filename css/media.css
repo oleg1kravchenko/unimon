@@ -434,7 +434,7 @@
     }
     .page-blog {
         padding-top: 10px;
-        padding-bottom: 130px;
+        padding-bottom: 60px;
     }
     .nav-page {
         display: none;
@@ -525,6 +525,7 @@
     .checkbox label > span:after {
         width: 16px;
         height: 16px;
+        font-size: 10px;
     }
     .checkbox label > span {
         padding-top: 2px;
