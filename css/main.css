@@ -1338,6 +1338,9 @@ header::after {
 	align-items: center;
 	justify-content: space-between;
 }
+.article-content__image {
+	display: block;
+}
 .article-content__image img {
 	max-width: 100%;
 	border-radius: 16px;

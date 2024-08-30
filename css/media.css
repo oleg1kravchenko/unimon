@@ -773,11 +773,8 @@
         height: 60px;
         font-size: 14px;
     }
-    .icon-input + input {
-        padding-left: 63px;
-    }
     .icon-input {
-        left: 37px;
+        left: 33px;
     }
     .consultation .line-form .btn-main {
         width: 100%;
@@ -1266,6 +1263,12 @@
         padding-bottom: 31px;
         background: linear-gradient(179.58deg, rgba(140, 182, 194, 0) 12.37%, rgba(140, 182, 194, 0.7) 95.05%);
     }
+    .form-page .icon-input + input {
+        padding-left: 63px;
+    }
+    .icon-input + input {
+        padding-left: 63px;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -1348,6 +1351,9 @@
     }
     .form-page .line-form .btn-main {
         padding: 0 15px;
+    }
+    .form-page .icon-input + input {
+        padding-left: 63px;
     }
 }
 
