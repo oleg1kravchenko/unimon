@@ -1355,6 +1355,12 @@
     .form-page .icon-input + input {
         padding-left: 63px;
     }
+    .modal-wrap {
+        padding: 59px 24px;
+    }
+    .title-modal {
+        font-size: 28px;
+    }
 }
 
 

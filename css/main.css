@@ -139,6 +139,9 @@ header::after {
 	display: flex;
 	align-items: center;
 }
+.list-socials a:hover img {
+	transform: scale(1.05);
+}
 .header__contact {
 	color: rgba(14, 52, 74, 0.47);
 	font-weight: 500;
@@ -906,6 +909,10 @@ header::after {
 	text-align: center;
 	justify-content: center;
 }
+.link-btn:hover {
+	background: #074287;
+	color: #fff;
+}
 .head-article .link-btn {
 	margin-left: auto;
 }
@@ -1409,6 +1416,16 @@ header::after {
 	justify-content: center;
 	text-align: center;
 	background: #fff;
+}
+.btn-block:hover {
+	background: #074287;
+}
+.btn-block:hover span {
+	color: #fff;
+	background: transparent;
+	background-clip: initial;
+	-webkit-background-clip: initial;
+	-webkit-text-fill-color: initial;
 }
 .btn-block span {
 	background: linear-gradient(90deg, #3793ae 0%, #074287 100%);
