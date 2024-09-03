@@ -1300,7 +1300,7 @@ header::after {
 }
 .consultation .form-page {
 	padding: 78px 130px;
-	background: linear-gradient(241.78deg, #8CB6C2 8.75%, rgba(255, 255, 255, 0) 172.25%), #D9D9D9;
+	background-image: url(../img/bg_form_page2.svg);
 }
 .consultation .line-form .btn-main {
 	font-size: 18px;
