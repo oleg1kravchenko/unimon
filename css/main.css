@@ -3475,3 +3475,11 @@ header::after {
 .fancybox-can-pan .fancybox-content, .fancybox-can-swipe .fancybox-content {
     cursor: initial;
 }
+.turnkey {
+	padding-top: 70px;
+	padding-bottom: 64px;
+    background: linear-gradient(0deg, #E6EEF1, #E6EEF1), #FFFFFF;
+}
+.turnkey .title-section {
+	color: #3793ae;
+}
