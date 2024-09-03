@@ -18,8 +18,8 @@
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css?ver=1.1" />
-	<link rel="stylesheet" href="css/media.css?ver=1.1" />
+	<link rel="stylesheet" href="css/main.css?ver=1.4" />
+	<link rel="stylesheet" href="css/media.css?ver=1.4" />
 </head>
 <body>
 
@@ -57,23 +57,27 @@
 							<img src="img/logo.svg" alt="alt">
 						</a>
 						<ul class="menu">
-							<li class="menu__haschld menu__parent">
+							<li class="menu__haschld">
 								<a href="#">Показатели</a>
 								<div class="menu__dropdown">
-									<ul>
-										<li><a href="#">Показатели температуры</a></li>
-									</ul>
+									<div class="container">
+										<ul>
+											<li><a href="#">Показатели температуры</a></li>
+										</ul>
+									</div>
 								</div>
 							</li>
-							<li class="menu__haschld menu__parent">
+							<li class="menu__haschld">
 								<a href="#">Решения</a>
 								<div class="menu__dropdown">
-									<ul>
-										<li><a href="#">Температуры</a></li>
-										<li><a href="#">Влажность</a></li>
-										<li><a href="#">Отопление</a></li>
-										<li><a href="#">Микроклимат</a></li>
-									</ul>
+									<div class="container">
+										<ul>
+											<li><a href="#">Температуры</a></li>
+											<li><a href="#">Влажность</a></li>
+											<li><a href="#">Отопление</a></li>
+											<li><a href="#">Микроклимат</a></li>
+										</ul>
+									</div>
 								</div>
 							</li>
 							<li class="menu__haschld">
@@ -118,14 +122,16 @@
 								</div>
 							</li>
 							<li><a href="#">Клиенты</a></li>
-							<li class="menu__haschld menu__parent">
+							<li class="menu__haschld">
 								<a href="#">Услуги</a>
 								<div class="menu__dropdown">
-									<ul>
-										<li><a href="#">Хранение лекарств</a></li>
-										<li><a href="#">Термокартирование</a></li>
-										<li><a href="#">Управление отоплением</a></li>
-									</ul>
+									<div class="container">
+										<ul>
+											<li><a href="#">Хранение лекарств</a></li>
+											<li><a href="#">Термокартирование</a></li>
+											<li><a href="#">Управление отоплением</a></li>
+										</ul>
+									</div>
 								</div>
 							</li>
 							<li><a href="#">Софт</a></li>
@@ -281,8 +287,11 @@
 							<div class="subscribe-sidebar">
 								<div class="subscribe-sidebar__title">Подпишитесь на наши новости</div>
 								<div class="subscribe-sidebar__descr">Оставьте ваш  электронный адрес и будьте в курсе последних новостей</div>
-								<form>
+								<form class="form">
 									<div class="item-form">
+										<div class="icon-input">
+											<img src="img/input_mail.svg" alt="alt">
+										</div>
 										<input type="email" placeholder="E-mail" required="required">
 									</div>
 									<div class="agree-form">Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных</div>
@@ -298,60 +307,54 @@
 		<section class="recommendations">
 			<div class="container">
 				<h2 class="title-main">Читать также</h2>
-				<ul class="slider-recommendations">
-					<li>
-						<div class="item-blog">
-							<a href="#" class="item-blog__image">
-								<img src="img/blog.jpg" alt="alt">
-							</a>
-							<a href="#" class="item-blog__title"><span>Безопасность систем мониторинга </span></a>
-							<div class="item-blog__text">Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower...</div>
-							<div class="item-blog__bottom">
-								<a href="#" class="tag-main">#температура и влажность</a>
-								<div class="data-main">01.04.2024</div>
+				<div class="row row_recommendations">
+					<div class="col-lg-10">
+						<div class="row row_main">
+							<div class="col-lg-4 col-6">
+								<div class="item-blog">
+									<a href="#" class="item-blog__image">
+										<img src="img/blog.jpg" alt="alt">
+									</a>
+									<a href="#" class="item-blog__title"><span>Безопасность систем мониторинга </span></a>
+									<div class="item-blog__text">Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower...</div>
+									<div class="item-blog__bottom">
+										<a href="#" class="tag-main">#температура и влажность</a>
+										<div class="data-main">01.04.2024</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-6">
+								<div class="item-blog">
+									<a href="#" class="item-blog__image">
+										<img src="img/blog.jpg" alt="alt">
+									</a>
+									<a href="#" class="item-blog__title"><span>Безопасность систем мониторинга </span></a>
+									<div class="item-blog__text">Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower...</div>
+									<div class="item-blog__bottom">
+										<a href="#" class="tag-main">#температура и влажность</a>
+										<div class="data-main">01.04.2024</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 hidden-mob">
+								<div class="item-blog">
+									<a href="#" class="item-blog__image">
+										<img src="img/blog.jpg" alt="alt">
+									</a>
+									<a href="#" class="item-blog__title"><span>Безопасность систем мониторинга </span></a>
+									<div class="item-blog__text">Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower...</div>
+									<div class="item-blog__bottom">
+										<a href="#" class="tag-main">#температура и влажность</a>
+										<div class="data-main">01.04.2024</div>
+									</div>
+								</div>
 							</div>
 						</div>
-					</li>
-					<li>
-						<div class="item-blog">
-							<a href="#" class="item-blog__image">
-								<img src="img/blog.jpg" alt="alt">
-							</a>
-							<a href="#" class="item-blog__title"><span>Безопасность систем мониторинга </span></a>
-							<div class="item-blog__text">Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower...</div>
-							<div class="item-blog__bottom">
-								<a href="#" class="tag-main">#температура и влажность</a>
-								<div class="data-main">01.04.2024</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="item-blog">
-							<a href="#" class="item-blog__image">
-								<img src="img/blog.jpg" alt="alt">
-							</a>
-							<a href="#" class="item-blog__title"><span>Безопасность систем мониторинга </span></a>
-							<div class="item-blog__text">Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower...</div>
-							<div class="item-blog__bottom">
-								<a href="#" class="tag-main">#температура и влажность</a>
-								<div class="data-main">01.04.2024</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="item-blog">
-							<a href="#" class="item-blog__image">
-								<img src="img/blog.jpg" alt="alt">
-							</a>
-							<a href="#" class="item-blog__title"><span>Безопасность систем мониторинга </span></a>
-							<div class="item-blog__text">Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower...</div>
-							<div class="item-blog__bottom">
-								<a href="#" class="tag-main">#температура и влажность</a>
-								<div class="data-main">01.04.2024</div>
-							</div>
-						</div>
-					</li>
-				</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="cases.html" class="btn-more"><span>Еще</span><img src="img/long_arrow.svg" alt="alt"></a>
+					</div>
+				</div>
 			</div>
 		</section>
     
@@ -361,25 +364,25 @@
 					<div class="form-page__title hidden-mob"><span>Закажите бесплатную консультацию специалиста по выбору оптимального оборудования</span></div>
 					<div class="form-page__title show-mob"><span>Бесплатная консультация</span></div>
 					<div class="form-page__descr show-mob">Закажите бесплатную консультацию специалиста по выбору оптимального оборудования</div>
-					<form>
+					<form class="form">
 						<div class="line-form">
 							<div class="item-form">
 								<div class="icon-input">
 									<img src="img/input_name.svg" alt="alt">
 								</div>
-								<input type="text" placeholder="Иван" required="required">
+								<input type="text" placeholder="Ваше имя" required="required">
 							</div>
 							<div class="item-form">
 								<div class="icon-input">
 									<img src="img/input_phone.svg" alt="alt">
 								</div>
-								<input type="tel" placeholder="8 968 333 44 67" class="input-phone" inputmode="numeric" required="required">
+								<input type="tel" placeholder="Ваш номер телефона" class="input-phone" inputmode="numeric" required="required">
 							</div>
 							<div class="item-form">
 								<div class="icon-input">
 									<img src="img/input_mail.svg" alt="alt">
 								</div>
-								<input type="email" placeholder="type@mail.ru" required="required">
+								<input type="email" placeholder="Ваша электронная почта" required="required">
 							</div>
 							<button class="btn-main">Отправить заявку</button>
 						</div>
@@ -439,7 +442,7 @@
 	<div id="callback" class="modal-block">
 		<div class="modal-wrap">
 			<div class="title-modal">Оставьте заявку и мы скоро с вами свяжемся</div>
-			<form>
+			<form class="form">
 				<div class="item-form">
 					<div class="icon-input">
 						<img src="img/input_name.svg" alt="alt">
@@ -477,7 +480,7 @@
 	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/mask/jquery.maskedinput.js"></script>
 	<script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
-	<script src="js/common.js?ver=1.1"></script>
+	<script src="js/common.js?ver=1.4"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>

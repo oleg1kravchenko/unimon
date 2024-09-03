@@ -18,8 +18,8 @@
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css?ver=1.1" />
-	<link rel="stylesheet" href="css/media.css?ver=1.1" />
+	<link rel="stylesheet" href="css/main.css?ver=1.4" />
+	<link rel="stylesheet" href="css/media.css?ver=1.4" />
 </head>
 <body>
 
@@ -57,23 +57,27 @@
 							<img src="img/logo.svg" alt="alt">
 						</a>
 						<ul class="menu">
-							<li class="menu__haschld menu__parent">
+							<li class="menu__haschld">
 								<a href="#">Показатели</a>
 								<div class="menu__dropdown">
-									<ul>
-										<li><a href="#">Показатели температуры</a></li>
-									</ul>
+									<div class="container">
+										<ul>
+											<li><a href="#">Показатели температуры</a></li>
+										</ul>
+									</div>
 								</div>
 							</li>
-							<li class="menu__haschld menu__parent">
+							<li class="menu__haschld">
 								<a href="#">Решения</a>
 								<div class="menu__dropdown">
-									<ul>
-										<li><a href="#">Температуры</a></li>
-										<li><a href="#">Влажность</a></li>
-										<li><a href="#">Отопление</a></li>
-										<li><a href="#">Микроклимат</a></li>
-									</ul>
+									<div class="container">
+										<ul>
+											<li><a href="#">Температуры</a></li>
+											<li><a href="#">Влажность</a></li>
+											<li><a href="#">Отопление</a></li>
+											<li><a href="#">Микроклимат</a></li>
+										</ul>
+									</div>
 								</div>
 							</li>
 							<li class="menu__haschld">
@@ -118,14 +122,16 @@
 								</div>
 							</li>
 							<li><a href="#">Клиенты</a></li>
-							<li class="menu__haschld menu__parent">
+							<li class="menu__haschld">
 								<a href="#">Услуги</a>
 								<div class="menu__dropdown">
-									<ul>
-										<li><a href="#">Хранение лекарств</a></li>
-										<li><a href="#">Термокартирование</a></li>
-										<li><a href="#">Управление отоплением</a></li>
-									</ul>
+									<div class="container">
+										<ul>
+											<li><a href="#">Хранение лекарств</a></li>
+											<li><a href="#">Термокартирование</a></li>
+											<li><a href="#">Управление отоплением</a></li>
+										</ul>
+									</div>
 								</div>
 							</li>
 							<li><a href="#">Софт</a></li>
@@ -391,12 +397,15 @@
 							<div class="form-page__descr">Оставьте ваш  электронный адрес и будьте в курсе последних новостей</div>
 						</div>
 						<div class="col-lg-7">
-							<form>
+							<form class="form">
 								<div class="line-form">
 									<div class="item-form">
+										<div class="icon-input">
+											<img src="img/input_mail.svg" alt="alt">
+										</div>
 										<input type="email" placeholder="Адрес электронной почты" required="required">
 									</div>
-									<button class="btn-main">Отправить заявку</button>
+									<button class="btn-main disabled">Отправить заявку</button>
 								</div>
 								<div class="checkbox">
 									<label>
@@ -426,7 +435,7 @@
 									<div class="form-partnership__title">Мы ищем партнеров!</div>
 									<div class="form-partnership__descr">Получить коммерческое предложение для дистрибьюторов</div>
 								</div>
-								<form>
+								<form class="form">
 									<div class="row">
 										<div class="col-6">
 											<div class="item-form">
@@ -543,7 +552,7 @@
 	<div id="callback" class="modal-block">
 		<div class="modal-wrap">
 			<div class="title-modal">Оставьте заявку и мы скоро с вами свяжемся</div>
-			<form>
+			<form class="form">
 				<div class="item-form">
 					<div class="icon-input">
 						<img src="img/input_name.svg" alt="alt">
@@ -581,7 +590,7 @@
 	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/mask/jquery.maskedinput.js"></script>
 	<script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
-	<script src="js/common.js?ver=1.1"></script>
+	<script src="js/common.js?ver=1.4"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
