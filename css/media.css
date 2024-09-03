@@ -524,9 +524,10 @@
         padding: 0 36px;
     }
     .line-form .btn-main {
-        padding: 0 25px;
-        height: 46px;
-        font-size: 10px;
+        height: 52px;
+        font-size: 14px;
+        padding: 0 10px;
+        width: 100%;
     }
     .checkbox {
         margin-top: 24px;
@@ -1295,6 +1296,12 @@
     }
     .header.nav-up {
         transform: none;
+    }
+    .line-form {
+        display: block;
+    }
+    .line-form .item-form {
+        margin-bottom: 15px;
     }
 }
 
