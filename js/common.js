@@ -1,22 +1,71 @@
 $(document).ready(function() {
 
 
-//прилипающие меню
-var $menu = $(".header");
-$(window).scroll(function(){
-  if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
-    $menu.removeClass("default").addClass("fixed");
-  } else if($(this).scrollTop() <= 0 && $menu.hasClass("fixed")) {
-    $menu.removeClass("fixed").addClass("default");
-  }
-  
+	$('.form').each(function() {
+        const $form = $(this);
+        const $button = $form.find('.btn-main');
+
+        function validateForm() {
+            let isValid = true;
+            $form.find('[required]').each(function() {
+                if ($(this).is(':invalid') || !$(this).val()) {
+                    isValid = false;
+                    return false;
+                }
+            });
+
+            if (isValid) {
+                $button.removeClass('disabled').prop('disabled', false);
+            } else {
+                $button.addClass('disabled').prop('disabled', true);
+            }
+        }
+
+        validateForm();
+
+        $form.find('[required]').on('input change', function() {
+            validateForm();
+        });
+    });
+
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('.header').outerHeight();
+
+$(window).scroll(function(event){
+	didScroll = true;
 });
 
-if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
-    $menu.removeClass("default").addClass("fixed");
-  } else if($(this).scrollTop() <= 0 && $menu.hasClass("fixed")) {
-    $menu.removeClass("fixed").addClass("default");
-  }
+setInterval(function() {
+	if (didScroll) {
+		hasScrolled();
+		didScroll = false;
+	}
+}, 250);
+
+function hasScrolled() {
+	var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+    	return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('.header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+        	$('.header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
 
 	//плавный скролл
 	$(".top-article li a, .sidebar-article li a").mPageScroll2id({
