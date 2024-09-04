@@ -1077,6 +1077,7 @@
         width: 348px;
         padding: 19px 30px;
         max-width: 100%;
+        min-height: 100vh;
         height: 100%;
         overflow: auto;
         top: 0;
@@ -1191,7 +1192,7 @@
         margin-top: 17px;
         margin-bottom: 25px;
         border-bottom: 1px solid #a8c8d9;
-        line-height: 80%;
+        line-height: 160%;
         text-transform: capitalize;
         color: #fff;
         letter-spacing: normal;
@@ -1286,10 +1287,7 @@
         overflow: hidden;
     }
     .btn-more {
-        padding: 20px 15px;
-        margin: 0;
-        margin-top: 15px;
-        min-height: initial;
+        margin-left: -10px;
     }
     .row_recommendations .row_main {
         padding-right: 0;
@@ -1454,7 +1452,10 @@
 
  /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-
+    .list-tags a:hover {
+        border-color: #3793AE;
+        color: #3793AE;
+    }
 }
 @media (min-width: 1440px) {
 	.container {
