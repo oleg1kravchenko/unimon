@@ -3418,6 +3418,7 @@ header::after {
 }
 .btn-main.disabled {
 	background: #a5a5a5;
+	border-color: transparent;
 	pointer-events: none;
 }
 .wrap-cases {
