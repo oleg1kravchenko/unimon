@@ -78,7 +78,7 @@ function hasScrolled() {
 }
 
 	//плавный скролл
-	$(".top-article li a, .sidebar-article li a").mPageScroll2id({
+	$(".top-article li a, .sidebar-article li a, .nav-catalog li a").mPageScroll2id({
 		offset: 20
 	});
 
@@ -153,6 +153,14 @@ $(".item-question__head").click(function() {
 		touchThreshold: 1000,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
 		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: true,
+				}
+			}
+		]
 	});
 
 	$('.slider-nav').slick({
@@ -186,6 +194,14 @@ $(".item-question__head").click(function() {
 		touchThreshold: 1000,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
 		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: true,
+				}
+			}
+		]
 	});
 
 	$('.slider-nav-vertical').slick({
@@ -212,7 +228,7 @@ $(".item-question__head").click(function() {
 		]
 	});
 
-	$('.slider-clients').slick({
+	$('.slider-clients_first').slick({
 		arrows: false,
 		dots: false,
 		vertical: true,
@@ -228,8 +244,75 @@ $(".item-question__head").click(function() {
         cssEase: 'linear',
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
 		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
-	
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					vertical: false,
+					variableWidth: true,
+				verticalSwiping: false,
+				}
+			}
+		]
 	});
+
+	$('.slider-clients_second').slick({
+		arrows: false,
+		dots: false,
+		vertical: true,
+		verticalSwiping: true,
+		infinite: true,
+		slidesToShow: 9,
+		slidesToScroll: 1,
+		touchThreshold: 1000,
+		focusOnSelect: true,
+		speed: 4000,
+        autoplay: true,
+        autoplaySpeed: 0, 
+        cssEase: 'linear',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					vertical: false,
+					variableWidth: true,
+				verticalSwiping: false,
+				}
+			}
+		]
+	});
+
+	$('.slider-clients_third').slick({
+		arrows: false,
+		dots: false,
+		vertical: true,
+		verticalSwiping: true,
+		infinite: true,
+		slidesToShow: 9,
+		slidesToScroll: 1,
+		touchThreshold: 1000,
+		focusOnSelect: true,
+		speed: 9000,
+        autoplay: true,
+        autoplaySpeed: 0, 
+        cssEase: 'linear',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					vertical: false,
+					variableWidth: true,
+				verticalSwiping: false,
+				}
+			}
+		]
+	});
+
+
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
