@@ -2179,6 +2179,7 @@ header::after {
 .interface {
 	padding-top: 87px;
 	padding-bottom: 35px;
+	overflow: hidden;
 	background-color: #edf0f2;
 	background-image: url(../img/bg_interface.svg);
 	background-repeat: no-repeat;
@@ -2393,6 +2394,7 @@ header::after {
 	padding-top: 225px;
 	padding-bottom: 61px;
 	color: #fff;
+	overflow: hidden;
 	background-image: url(../img/bg_solutions.png);
 	background-repeat: no-repeat;
 	background-position: center top;
