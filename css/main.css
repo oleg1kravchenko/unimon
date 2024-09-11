@@ -4043,3 +4043,6 @@ header::after {
 .wow {
 	visibility: hidden;
 }
+.fancy-image .fancybox-image {
+	border-radius: 0;
+}

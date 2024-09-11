@@ -375,6 +375,12 @@ function hasScrolled() {
 		backFocus: false,
 	});
 
+	$(".fancybox-img").fancybox({
+		autoFocus: false,
+		backFocus: false,
+		baseClass: "fancy-image"
+	});
+
 
 	//Кнопка "Наверх"
 	//Документация:
