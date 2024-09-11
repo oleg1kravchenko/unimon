@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+		/*animate*/
+		new WOW().init();
+
 
 	$(".list-tags a").click(function() {
 		$(this).parent().toggleClass("active");
@@ -82,12 +85,23 @@ function hasScrolled() {
 		offset: 20
 	});
 
-$(".item-question__head").click(function() {
-    $(this).parent().toggleClass("active");
-    $(this).siblings().slideToggle(200);
-    $(this).parent().siblings(".item-question").removeClass("active");
-    $(this).parent().siblings(".item-question").find(".item-question__content").slideUp(200);
-  });
+	$(".item-question__head").click(function() {
+		var index = $(this).parent().index();  // Получаем индекс текущего item-question
+	
+		// Обновляем активный item-question
+		$(this).parent().toggleClass("active");
+		$(this).siblings().slideToggle(200);
+		$(this).parent().siblings(".item-question").removeClass("active");
+		$(this).parent().siblings(".item-question").find(".item-question__content").slideUp(200);
+	
+		// Обновляем активный tab-pane-functional
+		$(".tab-pane-functional").eq(index).addClass("active").siblings().removeClass("active");
+			// Инициализация: скрываем все tab-pane-functional, кроме первого
+	$(".tab-pane-functional").fadeOut(0);
+	$(".tab-pane-functional.active").fadeIn(200);
+	});
+	
+
 
 	//кнопка sandwich
 	$(".sandwich").click(function() {
@@ -120,6 +134,10 @@ $(".item-question__head").click(function() {
 		$(this).parent().toggleClass("active");
 	});
 
+	$(".encryption__plus").click(function(e) {
+		$(this).siblings(".encryption__value").fadeToggle(200);
+	});
+
 
 	//слайдер
 
@@ -146,10 +164,10 @@ $(".item-question__head").click(function() {
 	$('.slider-for').slick({
 		arrows: false,
 		dots: false,
-		infinite: false,
+		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		asNavFor: '.slider-nav',
+		asNavFor: '.slider-nav, .slider-for-text',
 		touchThreshold: 1000,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
 		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
@@ -163,13 +181,28 @@ $(".item-question__head").click(function() {
 		]
 	});
 
+	$('.slider-for-text').slick({
+		arrows: false,
+		dots: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		swipe: false,
+		asNavFor: '.slider-nav, .slider-for-text',
+		touchThreshold: 1000,
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+	});
+
 	$('.slider-nav').slick({
 		arrows: true,
 		dots: false,
-		infinite: false,
+		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		asNavFor: '.slider-for',
+		centerMode: true,
+		variableWidth: true,
+		asNavFor: '.slider-for, .slider-for-text',
 		touchThreshold: 1000,
 		focusOnSelect: true,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
@@ -190,7 +223,7 @@ $(".item-question__head").click(function() {
 		infinite: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		asNavFor: '.slider-nav-vertical',
+		asNavFor: '.slider-nav-vertical, .slider-for-vertical-text',
 		touchThreshold: 1000,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
 		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
@@ -204,6 +237,19 @@ $(".item-question__head").click(function() {
 		]
 	});
 
+	$('.slider-for-vertical-text').slick({
+		arrows: false,
+		dots: false,
+		infinite: true,
+		swipe: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.slider-nav, .slider-for-vertical-text',
+		touchThreshold: 1000,
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+	});
+
 	$('.slider-nav-vertical').slick({
 		arrows: true,
 		dots: false,
@@ -212,7 +258,7 @@ $(".item-question__head").click(function() {
 		infinite: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		asNavFor: '.slider-for-vertical',
+		asNavFor: '.slider-for-vertical, .slider-for-vertical-text',
 		touchThreshold: 1000,
 		focusOnSelect: true,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
@@ -238,7 +284,7 @@ $(".item-question__head").click(function() {
 		slidesToScroll: 1,
 		touchThreshold: 1000,
 		focusOnSelect: true,
-		speed: 7000,
+		speed: 6000,
         autoplay: true,
         autoplaySpeed: 0, 
         cssEase: 'linear',
@@ -266,7 +312,7 @@ $(".item-question__head").click(function() {
 		slidesToScroll: 1,
 		touchThreshold: 1000,
 		focusOnSelect: true,
-		speed: 4000,
+		speed: 6000,
         autoplay: true,
         autoplaySpeed: 0, 
         cssEase: 'linear',
@@ -294,7 +340,7 @@ $(".item-question__head").click(function() {
 		slidesToScroll: 1,
 		touchThreshold: 1000,
 		focusOnSelect: true,
-		speed: 9000,
+		speed: 6000,
         autoplay: true,
         autoplaySpeed: 0, 
         cssEase: 'linear',
