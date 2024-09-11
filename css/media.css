@@ -231,7 +231,7 @@
         height: 75px;
         font-size: 18px;
     }
-    .functional__image img {
+    .functional__image > img {
         max-width: 800px;
     }
     .functional__image {
@@ -438,7 +438,11 @@
     }
     .item-catalog {
         padding: 30px 20px;
+        padding-left: 10px;
     }   
+    .row_catalog > div:nth-child(n+3) .item-catalog {
+        padding-left: 20px;
+    }
     .item-catalog__title {
         font-size: 18px;
         margin-bottom: 23px;
@@ -453,6 +457,24 @@
     }
     .head-catalog::before {
         background-position: center right 280px;
+    }
+    .tab-container-functional {
+        top: 55px;
+        left: 40px;
+    }
+    .functional__slide {
+        width: 545px;
+        height: 335px;
+    }
+    .encryption__unit {
+        top: 120px;
+        left: 267px;
+    }
+    .encryption__unit:nth-child(2) {
+        left: 584px;
+    }
+    .encryption__unit:nth-child(3) {
+        left: 927px;
     }
 }
 /* Large Devices, Wide Screens */
@@ -738,7 +760,7 @@
     .gosregistr__content strong {
         font-size: 11px;
     }
-    .functional__image img {
+    .functional__image > img {
         max-width: 780px;
     }
     .item-question__head {
@@ -896,8 +918,8 @@
         height: 355px;
     }
     .slider-nav-vertical__item, .slider-nav__item {
-        width: 70px;
-        height: 70px;
+        width: 72px;
+        height: 72px;
         padding: 20px;
     }
     .slider-nav-vertical__item::before, .slider-nav__item::before {
@@ -1171,6 +1193,20 @@
     .head-catalog::before {
         background-position: center right 202px;
         background-size: auto 100%;
+    }
+    .encryption__unit {
+        top: 96px;
+        left: 207px;
+    }
+    .encryption__unit:nth-child(2) {
+        left: 465px;
+    }
+    .encryption__unit:nth-child(3) {
+        left: 742px;
+    }
+    .functional__slide {
+        width: 526px;
+        height: 320px;
     }
 }
 
@@ -1879,8 +1915,9 @@
         vertical-align: middle;
     }
     .btn-login {
-        padding: 0 8px;
+        padding: 0 9px;
         gap: 8px;
+        padding-right: 13px;
         margin-bottom: 35px;
         background: #fff;
         height: 41px;
@@ -2247,7 +2284,7 @@
         margin-right: -130px;
         margin-bottom: -50px;
     }
-    .functional__image img {
+    .functional__image > img {
         max-width: 100%;
     }
     .functional .title-section {
@@ -2322,7 +2359,6 @@
     }
     .care-consult__title {
         font-size: 16px;
-        line-height: 92%;
         margin-bottom: 10px;
     }
     .care-consult p {
@@ -2509,6 +2545,7 @@
         max-width: 360px;
         margin: 0 auto;
         margin-top: 50px;
+        padding-right: 0;
     }
     .item-info {
         padding: 10px;
@@ -3031,10 +3068,9 @@
         margin-bottom: 8px;
     }
     .item-catalog__calculator {
-        width: 42px;
-        height: 46px;
-        background-color: transparent;
-        background-image: url(../img/ic_calculator_mob.svg);
+        width: 38px;
+        height: 36px;
+        background-size: 21px auto;
     }
     .row.row_catalog > div {
         margin-bottom: 22px;
@@ -3058,6 +3094,20 @@
     .slider-for-vertical::before, .slider-for::before {
         width: 400px;
         height: 400px;
+    }
+    .platforms__buttons li:nth-child(1) a img {
+        top: -1px;
+    }
+    .row_catalog > div:nth-child(n+3) .item-catalog {
+        padding-left: 0;
+    }
+    .tab-container-functional {
+        top: 11%;
+        left: 5%;
+    }
+    .functional__slide {
+        width: 72%;
+        height: auto;
     }
 }
 
@@ -3092,8 +3142,7 @@
         font-size: 7px;
     }
     .col-6 .data-main {
-        margin-left: 0;
-    }
+        margin-left: 0;    }
 }   
 @media only screen and (max-width : 440px) {
     .item-billbord {
