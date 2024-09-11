@@ -2198,6 +2198,8 @@ header::after {
 	margin-top: 20px;
 	margin-bottom: 55px;
 	max-width: 609px;
+	position: relative;
+	z-index: 1;
 }
 .interface .title-section span {
 	display: inline-block;
@@ -2206,6 +2208,8 @@ header::after {
 	gap: 19px;
 	display: flex;
 	align-items: center;
+	position: relative;
+	z-index: 1;
 }
 .interface__buttons .btn-main {
 	min-width: 283px;
@@ -2223,6 +2227,8 @@ header::after {
 	align-items: center;
 	border-radius: 15px;
 	background: rgba(255, 255, 255, 0.53);
+	position: relative;
+	z-index: 1;
 }
 .gosregistr__content span {
 	font-size: 15px;
@@ -2248,8 +2254,6 @@ header::after {
 }
 .interface__image {
 	margin-left: -255px;
-	position: relative;
-	z-index: -1;
 }
 .functional {
 	padding-top: 79px;
