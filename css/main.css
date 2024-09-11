@@ -2191,6 +2191,8 @@ header::after {
 	background-image: url(../img/bg_interface.svg);
 	background-repeat: no-repeat;
     background-position: calc(50% + 310px) 50%;
+	position: relative;
+	z-index: 1;
 }
 .interface .title-section {
 	margin-top: 20px;
@@ -2246,6 +2248,8 @@ header::after {
 }
 .interface__image {
 	margin-left: -255px;
+	position: relative;
+	z-index: -1;
 }
 .functional {
 	padding-top: 79px;
