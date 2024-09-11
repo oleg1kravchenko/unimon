@@ -2268,6 +2268,7 @@ header::after {
 .functional__slide {
 	width: 962px;
 	height: 589px;
+	display: block;
 }
 .functional__slide img {
 	width: 100%;
