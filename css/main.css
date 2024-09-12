@@ -2649,7 +2649,7 @@ header::after {
 	line-height: 89%;
 	letter-spacing: -0.05em;
 	color: rgba(14, 52, 74, 0.72);
-	opacity: 0.4;
+	opacity: 0.4 !important;
 }
 .item-info {
 	padding: 27px;
@@ -2924,6 +2924,7 @@ header::after {
 	margin-top: 10px;
 	margin-left: -48px;
 }
+
 .radiomodul__button {
 	margin-left: 20px;
 	margin-right: -15px;
@@ -2946,6 +2947,14 @@ header::after {
 	bottom: -40px;
 	top: auto;
 }
+.slider-nav-vertical {
+	height: 375px;
+}
+.slider-nav-vertical .slick-list {
+	padding: 0 !important;
+}
+
+
 
 .sensors {
 	padding: 79px 0;
@@ -3139,6 +3148,7 @@ header::after {
 	margin: 0 auto;
 	text-align: center;
 	margin-bottom: 90px;
+	color: rgba(14, 52, 74, 0.4);
 }
 .encryption__image img {
 	width: 100%;

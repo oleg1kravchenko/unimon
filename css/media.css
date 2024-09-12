@@ -476,6 +476,9 @@
     .encryption__unit:nth-child(3) {
         left: 927px;
     }
+    .slider-nav-vertical {
+        height: 315px;
+    }
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -1207,6 +1210,9 @@
     .functional__slide {
         width: 526px;
         height: 320px;
+    }
+    .slider-nav-vertical {
+        height: 216px;
     }
 }
 
