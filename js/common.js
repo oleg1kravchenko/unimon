@@ -362,6 +362,144 @@ function hasScrolled() {
 		]
 	});
 
+	$('.slider-for-card').slick({
+		arrows: false,
+		dots: false,
+		infinite: true,
+		swipe: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.slider-nav-card',
+		touchThreshold: 1000,
+		prevArrow: '<div class="slick-prev slick-arrow"><img src="img/prev_card.svg" alt="alt"><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><img src="img/next_card.svg" alt="alt"><div/>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: true,
+				}
+			}
+		]
+	});
+
+	$('.slider-nav-card').slick({
+		arrows: false,
+		dots: false,
+		vertical: true,
+		verticalSwiping: true,
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for-card',
+		touchThreshold: 1000,
+		focusOnSelect: true,
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					vertical: false,
+				verticalSwiping: false,
+				}
+			}
+		]
+	});
+
+	jQuery('.quantity').each(function() {
+		var spinner = jQuery(this),
+		input = spinner.find('input[type="number"]'),
+		btnUp = spinner.find('.quantity-up'),
+		btnDown = spinner.find('.quantity-down'),
+		min = input.attr('min'),
+		max = input.attr('max');
+
+		btnUp.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue >= max) {
+				var newVal = oldValue;
+			} else {
+				var newVal = oldValue + 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		});
+
+		btnDown.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue <= min) {
+				var newVal = oldValue;
+			} else {
+				var newVal = oldValue - 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		});
+	});
+
+	$(".item-calculation__head").click(function() {
+		$(this).parent().toggleClass("active");
+		$(this).siblings().slideToggle(200);
+	  });
+
+	  $('.nav-card a').on('click', function(e) {
+		e.preventDefault();
+		
+		var targetId = $(this).attr('href');
+		
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active");
+		
+
+		$('html, body').animate({
+		  scrollTop: $(targetId).offset().top - 80
+		}, 800); 
+
+		setTimeout(() => {
+			$(".header").removeClass("nav-down");
+			$(".header").addClass("nav-up");
+		}, 1000);
+	  });
+
+
+
+	  if ($('.nav-card').length > 0) {
+		var navCard = $('.nav-card');
+		var navCardOffset = navCard.offset().top;
+	
+		$(window).scroll(function() {
+			if ($(window).scrollTop() >= navCardOffset) {
+				navCard.addClass('fixed');
+			} else {
+				navCard.removeClass('fixed');
+			}
+		});
+	  }
+
+	  $(".fancybox-order").fancybox({
+		autoFocus: false,
+		backFocus: false,
+		baseClass: "fancy-order"
+	});
+
+	
+
+	  $(".add-to-calculation").click(function(e) {
+		e.preventDefault();
+		$(".btn-basket").fadeIn(200);
+	  });
+
+	  $(".btn-open-form").click(function(e) {
+		e.preventDefault();
+		$(".modal-order-wrap").addClass("active");
+	  });
+
+	  $(".open-calculation-form").click(function(e) {
+		e.preventDefault();
+		$(this).remove();
+		$(".calculation__form").slideDown(200);
+	  });
 
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
