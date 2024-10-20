@@ -3905,9 +3905,9 @@
     .btn-basket__wrap {
         width: 63px;
         height: 38px;
-        padding: 0 6px;
-        gap: 4px;
-        font-size: 10px;
+        padding: 0 9px;
+        gap: 6px;
+        font-size: 12px;
     }
     .btn-basket__wrap img {
         width: 24px;
