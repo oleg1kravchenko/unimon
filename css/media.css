@@ -3800,7 +3800,7 @@
         left: 25px;
     }
     .btn-basket {
-        display: none !important;
+        margin-left: 0;
     }
     .content-modal {
         padding: 20px 15px;
@@ -3855,6 +3855,7 @@
     }
     .form-modal .checkbox {
         font-size: 11px;
+        margin: 0 auto;
         margin-top: 15px;
     }
     .form-modal .checkbox label > span:before, .form-modal .checkbox label > span:after {
@@ -3900,6 +3901,16 @@
     .calculation-price.calculation-price_page {
         padding-top: 25px;
         padding-bottom: 63px;
+    }
+    .btn-basket__wrap {
+        width: 63px;
+        height: 38px;
+        padding: 0 6px;
+        gap: 4px;
+        font-size: 10px;
+    }
+    .btn-basket__wrap img {
+        width: 24px;
     }
 }
 

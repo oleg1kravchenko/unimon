@@ -4856,6 +4856,7 @@ input[type=number]
 }
 .btn-basket {
 	border-radius: 40px;
+	margin-left: 11px;
 	color: #fff;
 	display: none;
 	border: 1px solid #9b0e0e;
