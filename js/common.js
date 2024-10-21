@@ -365,7 +365,7 @@ function hasScrolled() {
 	$('.slider-for-card').slick({
 		arrows: false,
 		dots: false,
-		infinite: true,
+		infinite: false,
 		swipe: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -388,7 +388,7 @@ function hasScrolled() {
 		dots: false,
 		vertical: true,
 		verticalSwiping: true,
-		infinite: true,
+		infinite: false,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		asNavFor: '.slider-for-card',

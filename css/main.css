@@ -4962,10 +4962,10 @@ input[type=number]
 }
 .form-modal {
 	padding: 20px 32px;
-	width: 250px;
-	margin-left: -35px;
-	padding-left: 60px;
-	border-radius: 24px;
+    width: 270px;
+    margin-left: -55px;
+    padding-left: 80px;
+    border-radius: 24px;
 	background: linear-gradient(83.54deg, #CBD7DB 77.63%, #084387 238%);
 }
 .form-modal .icon-input + input {
